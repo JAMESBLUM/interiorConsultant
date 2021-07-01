@@ -1,0 +1,29 @@
+/*------------ FONTS ------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;700&display=swap');
+/* apply a natural box layout model to all elements, but allowing components to change */
+:root{
+  --negro: #181719;
+
+  --fontTitle: 'Lora', serif;
+  --principalFont: 'Montserrat', sans-serif;
+}
+html {
+  font-size: 62.5%; /*1rem = 10px*/
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  font-family: var(--principalFont);
+  font-size: 2.4rem;
+}
+.container{
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+}
+h1,h2,h3,h4{ font-family: var(--fontTitle);}
+h1{font-size: 6rem;} h2{font-size: 4rem;}
+h3{font-size: 3.5rem;} h4{font-size: 3rem;}
+img{width: 100%;}
