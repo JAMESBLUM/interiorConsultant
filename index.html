@@ -13,11 +13,84 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300&display=swap" rel="stylesheet">
     <title>Interior Consultant</title>
 </head>
 
 <body>
+    <header class="header">
+        <div class="header-contenido">
+            <div class="logo">
+                <h4 class="logo-title uppercase">This Interior</h4>
+            </div>
+            <div class="menu">
+                <label for="btn-menu" id="iconMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40"
+                        height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                </label>
+                <label for="btn-close" id="btn-close" class="btn-invisible">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="40"
+                        height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <path d="M10 10l4 4m0 -4l-4 4" />
+                    </svg>
+                </label>
+            </div>
+        </div>
+        <div class="navegacion">
+            <input type="checkbox" id="btn-menu">
+            <div class="navegacion-principal" id="nav">
+                <nav class="nav-principal">
+                    <a href="#">Home</a>
+                    <a href="#">Collection</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main-aside container">
+        <main class="main">
+            <h1>Modern interior</h1>
+            <p>
+                A full-Service & commercial interior design and staging company offering
+                professional organizing & eco-service.
+            </p>
+            <a href="#"> Read more →</a>
+        </main>
+        <aside class="aside">
+            <div class="aside-imgRoom">
+                <img src="img/photo1.png" alt="">
+            </div>
+            <div class="description">
+                <div class="description-img">
+                    <img src="img/photo2.png" alt="Aliza Webber woman">
+                    <div>
+                        <p><b>Alizaba Webber</b></p>
+                        <p>Interior Designer</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Designed in 2020 by Aliza Webber</h4>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <footer class="footer container">
+        <p class="centrarTexto">Created by <b>Edgar_Rod</b> - devChallenges.io</p>
+    </footer>
 
+    <script src="js/app.js"></script>
 </body>
 
 </html>

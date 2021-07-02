@@ -1,13 +1,17 @@
 /*------------ FONTS ------------*/
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300&display=swap');
 /* apply a natural box layout model to all elements, but allowing components to change */
 :root{
   --negro: #181719;
+  --blanco: #fff;
 
   --fontTitle: 'Lora', serif;
   --principalFont: 'Montserrat', sans-serif;
+  --fontLogo: 'Crimson Pro', serif;
 }
 html {
+  background-color: var(--negro);
   font-size: 62.5%; /*1rem = 10px*/
   box-sizing: border-box;
 }
@@ -17,13 +21,144 @@ html {
 body{
   font-family: var(--principalFont);
   font-size: 2.4rem;
+  color: var(--blanco);
 }
 .container{
   max-width: 120rem;
   width: 95%;
   margin: 0 auto;
 }
-h1,h2,h3,h4{ font-family: var(--fontTitle);}
+h1,h2,h3,h4{ 
+  font-family: var(--fontTitle);
+  margin: 0;
+}
 h1{font-size: 6rem;} h2{font-size: 4rem;}
 h3{font-size: 3.5rem;} h4{font-size: 3rem;}
 img{width: 100%;}
+a{
+  text-decoration: none;
+  color: var(--blanco);
+  margin: 0;
+}
+a:hover{
+  border-bottom: solid 3px var(--blanco);
+}
+/*=================================== UTILIDADES ===================================*/
+.uppercase{text-transform: uppercase;}
+.centrarTexto{ text-align: center;}
+.fijar-body{overflow: hidden;}
+
+/*=================================== Header ===================================*/
+.header{padding-bottom: 9rem;}
+@media (min-width:1280px){
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.logo{
+  border: solid 1px white;
+  padding: .5rem;
+}
+.logo-title{
+  font-family: var(--fontLogo);
+  font-size: 2rem;
+}
+.menu label{cursor: pointer;}
+#btn-menu{display:none;}
+@media (min-width: 1280px){.menu label{display: none;}}
+.header-contenido{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.navegacion-principal{
+  position: absolute;
+  background-color: var(--negro);
+  width: 100%;
+  height: 100%;
+  margin-left: -100%;
+  transition: margin-left 0.5s;
+  z-index: 1;
+}
+@media (min-width:1280px){
+  .navegacion-principal{
+    position: relative;
+    background-color: transparent;
+    margin-left: 0;
+    transition: none;
+  }
+}
+.nav-principal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 15rem;
+}
+@media (min-width: 1280px){
+  .nav-principal{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 0;
+  }
+  .nav-principal a{font-size: 1.8rem;}
+}
+.header-contenido, .navegacion-principal{
+  padding: 1rem 5rem;
+}
+.btn-invisible{display: none;}
+.btn-visible{display:initial;}
+.menu-visible{margin: 0;}
+/*=================================== Main ===================================*/
+.main{padding-bottom: 5rem;}
+.main h1{font-size: 4rem;}
+@media(min-width: 1280px){
+  .main-aside{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 12rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*=================================== Aside Designer===================================*/
+.description{
+  position: relative;
+  padding: 1.5rem;
+  width: 35rem;
+  margin: -9rem auto 0 auto;
+  background-color: var(--negro);
+}
+@media (min-width: 1280px){
+  .description{
+    margin: -9rem auto 0 32rem;
+  }
+}
+.description h4{ 
+  font-size: 2rem;
+  width: 20rem;
+}
+.description-img{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.description-img img{
+  border-radius: 50%;
+  width: 6rem;
+  margin-bottom: 2rem;
+}
+
+/*=================================== Footer ===================================*/
+.footer{
+  margin-top: 9rem;
+  font-size: 1.4rem;
+}
