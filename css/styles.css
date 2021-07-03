@@ -25,7 +25,7 @@ body{
 }
 .container{
   max-width: 120rem;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
 h1,h2,h3,h4{ 
@@ -50,12 +50,13 @@ a:hover{
 
 /*=================================== Header ===================================*/
 .header{padding-bottom: 9rem;}
-@media (min-width:1280px){
+@media (min-width:1200px){
   .header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
   }
 }
 .logo{
@@ -68,12 +69,11 @@ a:hover{
 }
 .menu label{cursor: pointer;}
 #btn-menu{display:none;}
-@media (min-width: 1280px){.menu label{display: none;}}
+@media (min-width: 1200px){.menu label{display: none;}}
 .header-contenido{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 .navegacion-principal{
   position: absolute;
@@ -84,7 +84,7 @@ a:hover{
   transition: margin-left 0.5s;
   z-index: 1;
 }
-@media (min-width:1280px){
+@media (min-width:1200px){
   .navegacion-principal{
     position: relative;
     background-color: transparent;
@@ -100,7 +100,7 @@ a:hover{
   gap: 5rem;
   margin-top: 15rem;
 }
-@media (min-width: 1280px){
+@media (min-width: 1200px){
   .nav-principal{
     flex-direction: row;
     justify-content: center;
@@ -119,11 +119,11 @@ a:hover{
 /*=================================== Main ===================================*/
 .main{padding-bottom: 5rem;}
 .main h1{font-size: 4rem;}
-@media(min-width: 1280px){
+@media(min-width: 1200px){
   .main-aside{
     display: grid;
     grid-template-columns: 40% 60%;
-    gap: 12rem;
+    gap: 11rem;
     justify-content: center;
     align-items: center;
   }
@@ -132,24 +132,32 @@ a:hover{
 .description{
   position: relative;
   padding: 1.5rem;
-  width: 35rem;
-  margin: -9rem auto 0 auto;
+  width: 90%;
+  margin: -5rem auto 0 auto;
   background-color: var(--negro);
 }
-@media (min-width: 1280px){
+@media (min-width: 768px){.description{margin: -9rem auto;}}
+@media (min-width: 1200px){
   .description{
-    margin: -9rem auto 0 32rem;
+    width: 50%;
+    margin: -9rem auto 0 25rem;
   }
 }
 .description h4{ 
   font-size: 2rem;
-  width: 20rem;
+  width: 90%;
 }
+@media (min-width:768px){.description{text-align: center;}}
+@media (min-width:1200px){.description{text-align: left;}}
 .description-img{
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 1.2rem;
+}
+@media (min-width: 768px){.description-img{justify-content: center;}}
+@media (min-width: 1200px){
+  .description-img{justify-content: left;}
 }
 .description-img img{
   border-radius: 50%;
